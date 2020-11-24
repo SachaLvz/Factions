@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Taco">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Taco.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../Taco.jar!/" />
+    </SOURCES>
+  </library>
+</component>

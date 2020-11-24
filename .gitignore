@@ -1,0 +1,26 @@
+# Eclipse stuff
+/.classpath
+/.project
+/.settings
+
+# NetBeans
+/nbproject
+/build.xml
+/nb-configuration.xml
+
+# vim
+.*.sw[a-p]
+
+# various other potential build files
+/build
+/bin
+/dist
+/*.jardesc
+/dependency-reduced-pom.xml
+
+# Mac filesystem dust
+.DS_Store
+/target/
+
+# Project exclude paths
+/out/
