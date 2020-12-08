@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.sk89q.worldedit.BlockVector;
-import com.sk89q.worldedit.Vector;
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 import com.sk89q.worldguard.protection.managers.RegionManager;
 import com.sk89q.worldguard.protection.ApplicableRegionSet;
@@ -15,6 +13,8 @@ import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 import static com.sk89q.worldguard.bukkit.BukkitUtil.*;
 import com.sk89q.worldguard.protection.flags.DefaultFlag;
 
+import com.sk89q.worldedit.Vector;
+import com.sk89q.worldedit.BlockVector;
 
 import org.bukkit.World;
 import org.bukkit.Chunk;
@@ -54,7 +54,7 @@ public class Worldguard
 		return enabled;
 	}
 
-	// PVP Flag check 
+	// PVP Flag check
 	// Returns:
 	//   True: PVP is allowed
 	//   False: PVP is disallowed
@@ -101,7 +101,7 @@ public class Worldguard
 
 		RegionManager regionManager = wg.getRegionManager(world);
 		ProtectedCuboidRegion region = new ProtectedCuboidRegion("wgfactionoverlapcheck", minChunk, maxChunk);
-		Map<String, ProtectedRegion> allregions = regionManager.getRegions(); 
+		Map<String, ProtectedRegion> allregions = regionManager.getRegions();
 		List<ProtectedRegion> allregionslist = new ArrayList<ProtectedRegion>(allregions.values());
 		List<ProtectedRegion> overlaps;
 		boolean foundregions = false;

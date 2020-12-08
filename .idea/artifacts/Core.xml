@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Core">
+    <output-path>$PROJECT_DIR$/../../Serv/Serv test 1.8.8/plugins</output-path>
+    <root id="archive" name="Core.jar">
+      <element id="module-output" name="PhaistosCore" />
+      <element id="file-copy" path="$PROJECT_DIR$/PhaistosCore/plugin.yml" />
+    </root>
+  </artifact>
+</component>

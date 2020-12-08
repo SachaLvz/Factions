@@ -36,19 +36,19 @@ public abstract class FRelationCommand extends FCommand
 		
 		if ( ! them.isNormal())
 		{
-			msg("<b>Nope! You can't...");
+			msg("<b>Vous ne pouvez pas !");
 			return;
 		}
 		
 		if (them == myFaction)
 		{
-			msg("<b>Nope! You can't declare a relation to yourself :)");
+			msg("<b>Vous ne pouvez pas déclarer une alliance avec vous même :)");
 			return;
 		}
 
 		if (myFaction.getRelationWish(them) == targetRelation)
 		{
-			msg("<b>You already have that relation wish set with %s.", them.getTag());
+			msg("<b>Vous avez déjà une relation avec %s.", them.getTag());
 			return;
 		}
 
@@ -67,15 +67,15 @@ public abstract class FRelationCommand extends FCommand
 			FactionRelationEvent relationEvent = new FactionRelationEvent(myFaction, them, oldRelation, currentRelation);
 			Bukkit.getServer().getPluginManager().callEvent(relationEvent);
 
-			them.msg("%s<i> is now %s.", myFaction.describeTo(them, true), targetRelation.getDescFactionOne());
-			myFaction.msg("%s<i> is now %s.", them.describeTo(myFaction, true), targetRelation.getDescFactionOne());
+			them.msg("%s<i> est maintenant %s.", myFaction.describeTo(them, true), targetRelation.getDescFactionOne());
+			myFaction.msg("%s<i> est maintenant %s.", them.describeTo(myFaction, true), targetRelation.getDescFactionOne());
 		}
 		// inform the other faction of your request
 		else
 		{
-			them.msg("%s<i> wishes to be %s.", myFaction.describeTo(them, true), targetRelation.getColor()+targetRelation.getDescFactionOne());
+			them.msg("%s<i> souhaitre être %s.", myFaction.describeTo(them, true), targetRelation.getColor()+targetRelation.getDescFactionOne());
 			them.msg("<i>Type <c>/"+Conf.baseCommandAliases.get(0)+" "+targetRelation+" "+myFaction.getTag()+"<i> to accept.");
-			myFaction.msg("%s<i> were informed that you wish to be %s<i>.", them.describeTo(myFaction, true), targetRelation.getColor()+targetRelation.getDescFactionOne());
+			myFaction.msg("%s<i> ont été informés que vous souhaitez être %s<i>.", them.describeTo(myFaction, true), targetRelation.getColor()+targetRelation.getDescFactionOne());
 		}
 		
 		// TODO: The ally case should work!!

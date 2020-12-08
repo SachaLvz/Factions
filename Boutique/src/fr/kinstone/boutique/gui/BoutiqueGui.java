@@ -9,6 +9,7 @@ import fr.minuskube.inv.SmartInventory;
 import fr.minuskube.inv.content.InventoryContents;
 import fr.minuskube.inv.content.InventoryProvider;
 import lombok.Getter;
+import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -36,7 +37,7 @@ public class BoutiqueGui implements InventoryProvider {
             BoutiqueType[] boutiqueType = BoutiqueType.values();
             BoutiqueType type = boutiqueType[i];
 
-                contents.set(1, 4, ClickableItem.of(new ItemBuilder(Material.SKULL_ITEM).setName("§eInformations - §c" + player.getName()).setLore("", "§ePoint(s) : §c" + ProfileManager.getInstance().getProfile(player.getName()).getPoints()).toItemStack(), null));
+                contents.set(1, 4, ClickableItem.empty(new ItemBuilder(Material.SKULL_ITEM, 1, (short) 3).setName("§eInformations - §c" + player.getName()).setLore("", "§ePoint(s) : §c" + ProfileManager.getInstance().getProfile(player.getName()).getPoints()).toItemStack()));
 
 
             if(i + 2 == 6){
@@ -54,6 +55,10 @@ public class BoutiqueGui implements InventoryProvider {
 
 
         }
+
+        contents.set(5, 8, ClickableItem.of(new ItemBuilder(Material.STAINED_GLASS_PANE, 1, (short) 14).setName("§cFermer").setWoolColor(DyeColor.RED).toItemStack(), e -> {
+           player.closeInventory();
+        }));
 
 
      /*   contents.set(2, 3, ClickableItem.of(new ItemBuilder(Material.DIAMOND_PICKAXE).setName("§cKits").toItemStack(), null));

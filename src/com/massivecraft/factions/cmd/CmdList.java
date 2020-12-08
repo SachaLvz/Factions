@@ -109,11 +109,11 @@ public class CmdList extends FCommand
 
 		for (Faction faction : factionList.subList(start, end))
 		{
-			if (faction.isNone())
+	/*		if (faction.isNone())
 			{
-				lines.add(p.txt.parse("<i>Factionless<i> %d online", Factions.i.getNone().getFPlayersWhereOnline(true).size()));
+				lines.add(p.txt.parse("<i>Wilderness<i> %d online", Factions.i.getNone().getFPlayersWhereOnline(true).size()));
 				continue;
-			}
+			} */
 			lines.add(p.txt.parse("%s<i> %d/%d en ligne, %d/%d/%d",
 				faction.getTag(fme),
 				faction.getFPlayersWhereOnline(true).size(),

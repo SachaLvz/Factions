@@ -86,7 +86,7 @@ public class FactionsEntityListener implements Listener
 			powerLossEvent.setCancelled(true);
 		}
 		else {
-			powerLossEvent.setMessage("<i>Your power is now <h>%d / %d");
+			powerLossEvent.setMessage("<i>Votre power est maintenant de <h>%d / %d");
 		}
 
 		// call Event
@@ -271,7 +271,7 @@ public class FactionsEntityListener implements Listener
 				if (notify)
 				{
 					FPlayer attacker = FPlayers.i.get((Player)damager);
-					attacker.msg("<i>PVP is disabled in %s.", defLocFaction.describeTo(attacker));
+					attacker.msg("<i>Le pvp est désactivé %s.", defLocFaction.describeTo(attacker));
 				}
 				return false;
 			}
@@ -292,7 +292,7 @@ public class FactionsEntityListener implements Listener
 
 		if (attacker.hasLoginPvpDisabled())
 		{
-			if (notify) attacker.msg("<i>You can't hurt other players for " + Conf.noPVPDamageToOthersForXSecondsAfterLogin + " seconds after logging in.");
+			if (notify) attacker.msg("<i>Vous ne pouvez pas attaquer ce joueur " + Conf.noPVPDamageToOthersForXSecondsAfterLogin + " seconds after logging in.");
 			return false;
 		}
 
@@ -301,7 +301,7 @@ public class FactionsEntityListener implements Listener
 		// so we know from above that the defender isn't in a safezone... what about the attacker, sneaky dog that he might be?
 		if (locFaction.getFlag(FFlag.PVP) == false)
 		{
-			if (notify) attacker.msg("<i>PVP is disabled in %s.", locFaction.describeTo(attacker));
+			if (notify) attacker.msg("<i>Le PVP est désactivé en %s.", locFaction.describeTo(attacker));
 			return false;
 		}
 
@@ -335,7 +335,7 @@ public class FactionsEntityListener implements Listener
 		// Check the relation
 		if (defender.hasFaction() && relation.isAtLeast(Conf.friendlyFireFromRel) && defLocFaction.getFlag(FFlag.FRIENDLYFIRE) == false)
 		{
-			if (notify) attacker.msg("<i>You can't hurt %s<i>.", relation.getDescPlayerMany());
+			if (notify) attacker.msg("<i>Vous ne pouvez pas attaquer %s<i>.", relation.getDescPlayerMany());
 			return false;
 		}
 
@@ -345,8 +345,8 @@ public class FactionsEntityListener implements Listener
 		{
 			if (notify)
 			{
-				attacker.msg("<i>You can't hurt %s<i> in their own territory unless you declare them as an enemy.", defender.describeTo(attacker));
-				defender.msg("%s<i> tried to hurt you.", attacker.describeTo(defender, true));
+				attacker.msg("<i>Vous ne pouvez pas attaquer %s<i> son propre territoire à moins que vous ne le déclariez comme ennemi.", defender.describeTo(attacker));
+				defender.msg("%s<i> a tenté de vous attaquer.", attacker.describeTo(defender, true));
 			}
 			return false;
 		}

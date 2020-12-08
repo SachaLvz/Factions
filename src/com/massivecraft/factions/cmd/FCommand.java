@@ -142,7 +142,7 @@ public abstract class FCommand extends MCommand<P>
 		
 		if (fme.getRole().isLessThan(role))
 		{
-			msg("<b>You <h>must be "+role+"<b> to "+this.getHelpShort()+".");
+			msg("<b>vous <h>devez être"+role+"<b> to "+this.getHelpShort()+".");
 			return false;
 		}
 		return true;
@@ -372,7 +372,7 @@ public abstract class FCommand extends MCommand<P>
 	{
 		if ( ! i.getFaction().equals(you.getFaction()))
 		{
-			i.sendMessage(p.txt.parse("%s <b>is not in the same faction as you.",you.describeTo(i, true)));
+			i.sendMessage(p.txt.parse("%s <b>n'est pas dans la même faction que vous.",you.describeTo(i, true)));
 			return false;
 		}
 		
@@ -393,7 +393,7 @@ public abstract class FCommand extends MCommand<P>
 			}
 			else
 			{
-				i.sendMessage(p.txt.parse("<b>Moderators can't control each other..."));
+				i.sendMessage(p.txt.parse("<b>Tu ne peux pas !!!!"));
 			}
 		}
 		else

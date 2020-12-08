@@ -52,7 +52,7 @@ public class CmdKick extends FCommand
 
 		if ( ! Conf.canLeaveWithNegativePower && you.getPower() < 0)
 		{
-			msg("<b>You cannot kick that member until their power is positive.");
+			msg("<b> Vous ne pouvez pas kick ce membre tant que son power n'est pas positif.");
 			return;
 		}
 		

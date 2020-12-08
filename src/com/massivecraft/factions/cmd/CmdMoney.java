@@ -26,7 +26,7 @@ public class CmdMoney extends FCommand
 		senderMustBeOfficer = false;
 		senderMustBeLeader = false;
 		
-		this.setHelpShort("faction money commands");
+		this.setHelpShort("commandes pour la money faction");
 		this.helpLong.add(p.txt.parseTags("<i>The faction money commands."));
 		
 		this.addSubCommand(this.cmdMoneyBalance);

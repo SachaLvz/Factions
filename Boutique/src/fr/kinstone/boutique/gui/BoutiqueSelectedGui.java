@@ -18,6 +18,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Arrays;
+
 public class BoutiqueSelectedGui implements InventoryProvider {
 
     @Getter
@@ -42,9 +44,6 @@ public class BoutiqueSelectedGui implements InventoryProvider {
     public void init(Player player, InventoryContents inventoryContents) {
 
         inventoryContents.fillBorders(ClickableItem.empty(new ItemStack(Material.STAINED_GLASS_PANE)));
-        inventoryContents.set(6, 9, ClickableItem.of(new ItemBuilder(Material.STAINED_GLASS_PANE).setName("§cRetour").setWoolColor(DyeColor.RED).toItemStack(), e -> {
-            BoutiqueGui.getInventory().open(player);
-        }));
 
         int row = 2;
         int slot = 1;
@@ -59,13 +58,17 @@ public class BoutiqueSelectedGui implements InventoryProvider {
             }
 
             slot++;
-                inventoryContents.set(row, slot, ClickableItem.of(new ItemBuilder(boutiqueEnum.getMaterial()).setName("§e" + boutiqueEnum.getName()).setLore("", "§ePrix : §c" + boutiqueEnum.getPrice()).hideAttribues(ItemFlag.HIDE_ATTRIBUTES).toItemStack(), e -> {
+                inventoryContents.set(row, slot, ClickableItem.of(new ItemBuilder(boutiqueEnum.getMaterial()).setName("§e" + boutiqueEnum.getName()).setLore("", "§ePrix : §c" + boutiqueEnum.getPrice()).hideAttribues(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_DESTROYS, ItemFlag.HIDE_ENCHANTS).toItemStack(), e -> {
                     BoutiqueConfirmGui.confirmInventory(boutiqueEnum).open(player);
                 }));
 
 
 
         }
+
+        inventoryContents.set(5, 8, ClickableItem.of(new ItemBuilder(Material.STAINED_GLASS_PANE, 1, (short) 14).setName("§cRetour").setWoolColor(DyeColor.RED).toItemStack(), e -> {
+            BoutiqueGui.getInventory().open(player);
+        }));
 
     }
 

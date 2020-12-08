@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="WorldEdit">
+  <library name="EssentialsX-2.18.2.01">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../plugins/WorldEdit.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../EssentialsX-2.18.2.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

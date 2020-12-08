@@ -123,7 +123,9 @@ public class ItemBuilder
 
   public ItemBuilder hideAttribues(ItemFlag... itemFlags){
 
-    this.is.getItemMeta().removeItemFlags(itemFlags);
+    ItemMeta meta = this.is.getItemMeta();
+    meta.removeItemFlags(itemFlags);
+    this.is.setItemMeta(meta);
     return this;
 
   }

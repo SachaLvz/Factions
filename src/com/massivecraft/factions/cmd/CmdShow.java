@@ -52,9 +52,10 @@ public class CmdShow extends FCommand
 		Collection<FPlayer> recruits = faction.getFPlayersWhereRole(Rel.RECRUIT);
 		
 		msg(p.txt.titleize(faction.getTag(fme)));
+		msg("");
 		msg("<a>Description: <i>%s", faction.getDescription());
 		
-		// Display important flags
+	/*	// Display important flags
 		// TODO: Find the non default flags, and display them instead.
 		if (faction.getFlag(FFlag.PERMANENT))
 		{
@@ -65,12 +66,12 @@ public class CmdShow extends FCommand
 		{
 			msg("<a>This faction is peaceful - in truce with everyone.");
 		}
-		
-		msg("<a>Joining: <i>"+(faction.getOpen() ? "no invitation is needed" : "invitation is required"));
+		*/
+		//msg("<a>Joining: <i>"+(faction.getOpen() ? "no invitation is needed" : "invitation is required"));
 
 		double powerBoost = faction.getPowerBoost();
-		String boost = (powerBoost == 0.0) ? "" : (powerBoost > 0.0 ? " (bonus: " : " (penalty: ") + powerBoost + ")";
-		msg("<a>Land / Power / Maxpower: <i> %d/%d/%d %s", faction.getLandRounded(), faction.getPowerRounded(), faction.getPowerMaxRounded(), boost);
+		String boost = (powerBoost == 0.0) ? "" : (powerBoost > 0.0 ? " (bonus: " : " (pénalite: ") + powerBoost + ")";
+		msg("<a>Claim(s) / Power / Maxpower: <i> %d/%d/%d %s", faction.getLandRounded(), faction.getPowerRounded(), faction.getPowerMaxRounded(), boost);
 
 		// show the land value
 		if (Econ.shouldBeUsed())
@@ -98,14 +99,14 @@ public class CmdShow extends FCommand
 		
 		if (faction.getFlag(FFlag.PEACEFUL))
 		{
-			sendMessage(p.txt.parse("<a>In Truce with:<i> *everyone*"));
+			sendMessage(p.txt.parse("<a>Truce :<i> *everyone*"));
 		}
 		else
 		{
-			sendMessage(p.txt.parse("<a>In Truce with: ") + TextUtil.implode(relationTags.get(Rel.TRUCE), sepparator));
+			sendMessage(p.txt.parse("<a>Truce : ") + TextUtil.implode(relationTags.get(Rel.TRUCE), sepparator));
 		}
 		
-		sendMessage(p.txt.parse("<a>Allied to: ") + TextUtil.implode(relationTags.get(Rel.ALLY), sepparator));
+		sendMessage(p.txt.parse("<a>Ally : ") + TextUtil.implode(relationTags.get(Rel.ALLY), sepparator));
 		sendMessage(p.txt.parse("<a>Enemies: ") + TextUtil.implode(relationTags.get(Rel.ENEMY), sepparator));
 		
 		// List the members...
@@ -159,8 +160,8 @@ public class CmdShow extends FCommand
 				memberOfflineNames.add(follower.getNameAndTitle(fme));
 			}
 		}
-		sendMessage(p.txt.parse("<a>Members online: ") + TextUtil.implode(memberOnlineNames, sepparator));
-		sendMessage(p.txt.parse("<a>Members offline: ") + TextUtil.implode(memberOfflineNames, sepparator));
+		sendMessage(p.txt.parse("<a>Membres en ligne: ") + TextUtil.implode(memberOnlineNames, sepparator));
+		sendMessage(p.txt.parse("<a>Membres déconnectés: ") + TextUtil.implode(memberOfflineNames, sepparator));
 	}
 	
 }

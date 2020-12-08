@@ -5,6 +5,7 @@ import fr.kinstone.boutique.commands.BoutiqueGivePointCommand;
 import fr.kinstone.boutique.listeners.PlayerListeners;
 import fr.kinstone.boutique.manager.BoutiqueManager;
 import fr.kinstone.boutique.profile.ProfileManager;
+import fr.kinstone.boutique.scoreboard.ScoreBoardListeners;
 import fr.kinstone.boutique.utils.command.CommandFramework;
 import fr.kinstone.boutique.utils.json.JsonFramework;
 import fr.kinstone.boutique.utils.json.JsonPersist;
@@ -37,12 +38,15 @@ public class Main extends JavaPlugin {
         jsonFramework.loadAllData();
 
         getServer().getPluginManager().registerEvents(new PlayerListeners(), this);
+        getServer().getPluginManager().registerEvents(new ScoreBoardListeners(), this);
 
         commandFramework = new CommandFramework(this);
         commandFramework.registerCommands(new BoutiqueCommand());
         commandFramework.registerCommands(new BoutiqueGivePointCommand());
 
         boutiqueManager = new BoutiqueManager();
+
+
 
 
 

@@ -12,64 +12,64 @@ permissions:
 # -------------------------------------------- #
 # THE REAL NODES
 # -------------------------------------------- #
-  factions.access: {description: grant territory access for your faction, with the proper fperm}
-  factions.access.any: {description: grant territory access for any faction}
-  factions.access.view: {description: view territory access info for your faction}
-  factions.adminmode: {description: enable admin bypass mode}
-  factions.autoclaim: {description: auto-claim land as you walk around}
+  factions.access: {description: accordez l'accès au territoire à votre faction, avec le fperm approprié}
+  factions.access.any: {description: accorder l'acces au territoire pour n importe quelle faction}
+  factions.access.view: {description: voir les informations des accès à votre territoire}
+  factions.adminmode: {description: activer le mode admin}
+  factions.autoclaim: {description: permet de claim automatiquement}
   factions.cape: {description: manage faction capes}
   factions.cape.get: {description: get faction cape}
   factions.cape.set: {description: set faction cape}
   factions.cape.remove: {description: remove faction cape}
-  factions.claim: {description: claim land where you are standing}
-  factions.claim.radius: {description: claim land in a large radius}
-  factions.config: {description: change a conf.json setting}
-  factions.create: {description: create a new faction}
-  factions.deinvite: {description: remove a pending invitation}
-  factions.demote: {description: demote lesser members in your faction}
-  factions.description: {description: change the faction description}
-  factions.disband: {description: disband a faction}
-  factions.flag: {description: read faction flags}
-  factions.flag.set: {description: set faction flags}
-  factions.help: {description: display a help page}
-  factions.home: {description: teleport to the faction home}
-  factions.invite: {description: invite a player to your faction}
-  factions.join: {description: join a faction}
-  factions.join.any: {description: join any faction, bypassing invitation process for closed factions}
+  factions.claim: {description: permet de claim à l'endroit ou vous vous trouvez}
+  factions.claim.radius: {description: permet de claim avec un radus}
+  factions.config: {description: changer les paramètres}
+  factions.create: {description: creer une nouvelle faction}
+  factions.deinvite: {description: ne plus inviter un joueur}
+  factions.demote: {description: retrograder une personne de votre faction}
+  factions.description: {description: changer le description de faction}
+  factions.disband: {description: dissoudre une faction}
+  factions.flag: {description: voir les flags d'une faction}
+  factions.flag.set: {description: définir les flags}
+  factions.help: {description: voir la page d'aide}
+  factions.home: {description: teleporter au home de faction}
+  factions.invite: {description: inviter une joueur dans votre faction}
+  factions.join: {description: rejoindre une faction}
+  factions.join.any: {description: rejoindre n'importe quelle faction, en contournant le processus d'invitation pour les factions fermées}
   factions.join.others: {description: specify another player in the join command, to move them to the specified faction}
-  factions.kick: {description: kick a player from the faction}
+  factions.kick: {description: exclure un joueur de votre faction}
   factions.leader: {description: hand over leader rights}
   factions.leader.any: {description: give or revoke leader status for any player in any faction}
-  factions.leave: {description: leave your faction}
-  factions.list: {description: see a list of the factions}
-  factions.lock: {description: lock all write stuff}
-  factions.map: {description: show the territory map, and set optional auto update}
-  factions.money.balance: {description: show your factions current money balance}
+  factions.leave: {description: quitter votre faction}
+  factions.list: {description: Voir la liste de des factions}
+  factions.lock: {description: }
+  factions.map: {description: voir les territoires sur la map}
+  factions.money.balance: {description: montre le solde actuel d'une factions}
   factions.money.balance.any: {description: show money balance for factions other than your own}
-  factions.money.deposit: {description: deposit money into a faction bank}
+  factions.money.deposit: {description: ajouter de la money dans votre faction}
   factions.money.f2f: {description: transfer money from faction to faction}
   factions.money.f2p: {description: transfer money from faction to player}
   factions.money.p2f: {description: transfer money from player to faction}
-  factions.money.withdraw: {description: withdraw money from your faction bank}
-  factions.officer: {description: give or revoke officer rights}
+  factions.money.withdraw: {description: retirer de l'argent de la banque de votre faction}
+  factions.officer: {description: donner ou révoquer le rôle modérateur}
   factions.officer.any: {description: give or revoke officer rights for any player in any faction}
-  factions.open: {description: switch if invitation is required to join}
-  factions.perm: {description: change faction permissions}
-  factions.power: {description: show player power info}
-  factions.power.any: {description: view an other players power level}
-  factions.powerboost: {description: apply permanent power bonus/penalty to specified player or faction}
-  factions.promote: {description: promote lesser members in your faction}
-  factions.relation: {description: set relation wish to another faction}
-  factions.reload: {description: reload data file(s) from disk}
-  factions.save: {description: save all data to disk}
-  factions.seechunk: {description: see the chunk you stand in}
-  factions.sethome: {description: set the faction home}
-  factions.show: {description: show faction information}
-  factions.tag: {description: change the faction tag}
-  factions.title: {description: set or remove a players title}
-  factions.unclaim: {description: unclaim the land where you are standing}
-  factions.unclaimall: {description: unclaim all of your factions land}
-  factions.version: {description: see the version of the plugin}
+  factions.open: {description: changer si une invitation est requise pour rejoindre}
+  factions.perm: {description: changer les permission faction}
+  factions.power: {description: voir les power d'un joueur}
+  factions.power.any: {description: voir le power des autres joueurs}
+  factions.powerboost: {description: ajouter du boots à une faction}
+  factions.promote: {description: promouvoir une personne de votre faction}
+  factions.relation: {description: définir le souhait de relation avec une autre faction}
+  factions.reload: {description: rafraichir les données du disque}
+  factions.save: {description: sauvegarder toutes les données}
+  factions.seechunk: {description: voir le chunk ou vous vous trouvez}
+  factions.sethome: {description: mettre le home de faction}
+  factions.show: {description: voir les informations d'une faction}
+  factions.tag: {description: changer le nom de faction}
+  factions.title: {description: mettre ou enlever le titre d'un joueur}
+  factions.unclaim: {description: permet d'unclaim le territoire ou vous etes}
+  factions.unclaimall: {description: unclaim tous les territoires de votre faction}
+  factions.version: {description: voir le version du plugin}
 # -------------------------------------------- #
 # STAR NOTATION
 # -------------------------------------------- #

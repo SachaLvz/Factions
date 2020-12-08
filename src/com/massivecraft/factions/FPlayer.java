@@ -465,13 +465,13 @@ public class FPlayer extends PlayerEntity implements EconomyParticipator
 		
 		if (!perm && this.getRole() == Rel.LEADER && myFaction.getFPlayers().size() > 1)
 		{
-			msg("<b>You must give the admin role to someone else first.");
+			msg("<b>Vous devez donner le rôle d'admin à une personne avant de quitter.");
 			return;
 		}
 
 		if (!Conf.canLeaveWithNegativePower && this.getPower() < 0)
 		{
-			msg("<b>You cannot leave until your power is positive.");
+			msg("<b>Vous ne pouvez pas quitter avec un power négatif.");
 			return;
 		}
 
@@ -497,11 +497,11 @@ public class FPlayer extends PlayerEntity implements EconomyParticipator
 		{
 			for (FPlayer fplayer : myFaction.getFPlayersWhereOnline(true))
 			{
-				fplayer.msg("%s<i> quitte %s<i>.", this.describeTo(fplayer, true), myFaction.describeTo(fplayer));
+				fplayer.msg("%s<i> quittez %s<i>.", this.describeTo(fplayer, true), myFaction.describeTo(fplayer));
 			}
 
 			if (Conf.logFactionLeave)
-				P.p.log(this.getName()+" quitte votre faction: "+myFaction.getTag());
+				P.p.log(this.getName()+" quittze votre faction: "+myFaction.getTag());
 		}
 		
 		this.resetFactionData();
@@ -564,11 +564,11 @@ public class FPlayer extends PlayerEntity implements EconomyParticipator
 		}
 		else if ( ! Conf.claimingFromOthersAllowed && currentFaction.isNormal())
 		{
-			error = P.p.txt.parse("<b>You may not claim land from others.");
+			error = P.p.txt.parse("<b>Vous ne pouvez pas claim ici.");
 		}
 		else if (currentFaction.getRelationTo(forFaction).isAtLeast(Rel.TRUCE) && ! currentFaction.isNone())
 		{
-			error = P.p.txt.parse("<b>You can't claim this land due to your relation with the current owner.");
+			error = P.p.txt.parse("<b>Vous ne pouvez pas réclamer ce claim en raison de votre relation avec le propriétaire actuel.");
 		}
 		else if
 		(

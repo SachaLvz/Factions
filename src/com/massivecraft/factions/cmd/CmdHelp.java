@@ -37,13 +37,13 @@ public class CmdHelp extends FCommand
 		
 		int page = this.argAsInt(0, 1);
 		
-		sendMessage(p.txt.titleize("Factions Help ("+page+"/"+helpPages.size()+")"));
+		sendMessage(p.txt.titleize("Aide faction ("+page+"/"+helpPages.size()+")"));
 		
 		page -= 1;
 		
 		if (page < 0 || page >= helpPages.size())
 		{
-			msg("<b>This page does not exist");
+			msg("<b>Cette page n'existe pas");
 			return;
 		}
 		sendMessage(helpPages.get(page));

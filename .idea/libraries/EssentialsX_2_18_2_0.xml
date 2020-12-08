@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="EssentialsX-2.18.2.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../EssentialsX-2.18.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../lombok.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Vault.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../worldedit-bukkit-7.2.0-dist.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../worldguard-bukkit-7.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

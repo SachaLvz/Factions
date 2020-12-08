@@ -29,12 +29,12 @@ public class CmdAdmin extends FCommand
 		
 		if ( fme.hasAdminMode())
 		{
-			fme.msg("<i>You have enabled admin bypass mode.");
+			fme.msg("<i>Vous avez activé le BYPASS MODE.");
 			P.p.log(fme.getName() + " has ENABLED admin bypass mode.");
 		}
 		else
 		{
-			fme.msg("<i>You have disabled admin bypass mode.");
+			fme.msg("<i>Vous avez désactivé le BYPASS MODE.");
 			P.p.log(fme.getName() + " DISABLED admin bypass mode.");
 		}
 	}

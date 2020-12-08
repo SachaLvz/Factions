@@ -13,22 +13,22 @@ public enum BoutiqueEnum {
 
     // GRADE
 
-    ARISTOCRATE("Aristocrate", BoutiqueType.GRADES, 500, "", Material.WOOD_SWORD),
-    HERMES("Hermes", BoutiqueType.GRADES, 1000, "", Material.STONE_SWORD),
-    ARES("Ares", BoutiqueType.GRADES, 1500, "", Material.IRON_SWORD),
-    ADES("Ades", BoutiqueType.GRADES, 2500, "", Material.GOLD_SWORD),
-    ZEUS("Zeus", BoutiqueType.GRADES, 3500, "", Material.DIAMOND_SWORD),
+    ARISTOCRATE("Aristocrate", BoutiqueType.GRADES, 500, "group set Aristocrate", Material.WOOD_SWORD),
+    HERMES("Hermes", BoutiqueType.GRADES, 1000, "group set Hermes", Material.STONE_SWORD),
+    ARES("Ares", BoutiqueType.GRADES, 1500, "group set Ares", Material.IRON_SWORD),
+    ADES("Ades", BoutiqueType.GRADES, 2500, "group set Ades", Material.GOLD_SWORD),
+    ZEUS("Zeus", BoutiqueType.GRADES, 3500, "group set Zeus", Material.DIAMOND_SWORD),
 
     // KITS
 
-    ENCHANTEUR("Enchanteur", BoutiqueType.KITS, 500, "", Material.ENCHANTMENT_TABLE),
-    POTION("Potion", BoutiqueType.KITS, 500, "", Material.POTION),
-    CONSTRUCTION("Construction", BoutiqueType.KITS, 500, "", Material.WORKBENCH),
-    ALCHIMISTE("Alchimiste", BoutiqueType.KITS, 700, "", Material.BREWING_STAND),
-    PILLAGE("Pillage", BoutiqueType.KITS, 700, "", Material.TNT),
-    EXPLORATEUR("Explorateur", BoutiqueType.KITS, 1000, "", Material.MAP),
-    OBSI("Obsi", BoutiqueType.KITS, 1200, "", Material.OBSIDIAN),
-    PVP("Pvp", BoutiqueType.KITS, 2000, "", Material.DIAMOND_SWORD),
+    ENCHANTEUR("Enchanteur", BoutiqueType.KITS, 500, "add essentials.kits.enchanteur", Material.ENCHANTMENT_TABLE),
+    POTION("Potion", BoutiqueType.KITS, 500, "add essentials.kits.potion", Material.POTION),
+    CONSTRUCTION("Construction", BoutiqueType.KITS, 500, "add essentials.kits.construction", Material.WORKBENCH),
+    ALCHIMISTE("Alchimiste", BoutiqueType.KITS, 700, "add essentials.kits.alchimiste", Material.BREWING_STAND),
+    PILLAGE("Pillage", BoutiqueType.KITS, 700, "add essentials.kits.pillage", Material.TNT),
+    EXPLORATEUR("Explorateur", BoutiqueType.KITS, 1000, "add essentials.kits.explorateur", Material.MAP),
+    OBSI("Obsi", BoutiqueType.KITS, 1200, "add essentials.kits.obsidienne", Material.OBSIDIAN),
+    PVP("Pvp", BoutiqueType.KITS, 2000, "add essentials.kits.pvp", Material.DIAMOND_SWORD),
 
     // KEYS
 
@@ -83,6 +83,7 @@ public enum BoutiqueEnum {
     private double price;
     private String command;
     private Material material;
+    private String[] lore;
 
     BoutiqueEnum(String name, BoutiqueType boutiqueType, double price, String command, Material material){
       this.name = name;
@@ -90,6 +91,15 @@ public enum BoutiqueEnum {
       this.price = price;
       this.command = command;
       this.material = material;
+    }
+
+    BoutiqueEnum(String name, BoutiqueType boutiqueType, double price, String command, Material material, String[] lore){
+        this.name = name;
+        this.boutiqueType = boutiqueType;
+        this.price = price;
+        this.command = command;
+        this.material = material;
+        this.lore = lore;
     }
 
 
